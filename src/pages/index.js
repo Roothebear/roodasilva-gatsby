@@ -17,7 +17,6 @@ const IndexPage = ({ data }) => {
         alt="Website logo - stylised signature of Roo da Silva"
         src="../images/reindeer.jpg"
       />
-
       <section>
         <h1>Welcome!</h1>
         <p>
