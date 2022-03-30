@@ -1,0 +1,16 @@
+.footer-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.icon {
+  width: 24px;
+  margin: 1rem;
+}

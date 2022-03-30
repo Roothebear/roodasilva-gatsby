@@ -1,7 +1,25 @@
 module.exports = {
   siteMetadata: {
-    title: `roodasilva-gatsby`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `roodasilva.com`,
+    siteUrl: `https://www.roodasilva.com`,
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `articles`,
+        path: `${__dirname}/content/articles`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/content/portfolio`,
+      },
+    },
+    "gatsby-plugin-mdx",
+  ],
+};

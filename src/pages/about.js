@@ -1,25 +1,15 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import ListContainer from "../components/listContainer";
 import HighlightCard from "../components/highlight-card";
 import Footer from "../components/footer";
 
-import { bannerImg, bannerSection } from "../components/layout.module.css";
-
-const IndexPage = ({ data }) => {
+const AboutPage = ({ data }) => {
   console.log("data: ", data);
 
   return (
-    <Layout pageTitle={"home"}>
-    <section className={bannerSection}>
-        <StaticImage
-          className={bannerImg}
-          alt="Website logo - stylised signature of Roo da Silva"
-          src="../images/mountain-lake.jpeg"
-        />
-    </section>
+    <Layout pageTitle={"about"}>
       <section>
         <h1>Welcome!</h1>
         <p>
@@ -28,18 +18,18 @@ const IndexPage = ({ data }) => {
           front and back end technologies. This site documents my work,
           interests and continuing learning in this and related areas.
         </p>
+
+        <p>
+          My career to date has included Founder and CEO roles in the UK's
+          non-profit sector alongside freelance consulting in areas related to
+          my prior experience. I am most interested in how technology can
+          benefit society and individuals. I hope you'll enjoy browsing the
+          projects, sketches, and blog articles above.
+        </p>
         <Footer />
       </section>
       <section>
         <HighlightCard />
-      </section>
-      <section>
-        <h2>Recent projects</h2>
-        <ListContainer data={data} filterParam={"portfolio"} />
-      </section>
-      <section>
-        <h2>Recent articles</h2>
-        <ListContainer data={data} filterParam={"articles"} />
       </section>
     </Layout>
   );
@@ -62,4 +52,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage;
+export default AboutPage;
