@@ -8,10 +8,7 @@ const PortfolioPage = ({ data }) => {
     <Layout pageTitle={"portfolio"}>
       <section>
         <h2>Portfolio</h2>
-        <ListContainer
-          data={data}
-          filterParam={"portfolio"}
-        />
+        <ListContainer data={data} filterParam={"portfolio"} />
       </section>
     </Layout>
   );
@@ -25,7 +22,15 @@ export const query = graphql`
           date(formatString: "D MMMM YYYY")
           title
           variant
+          type
           tags
+          hero_image_alt
+          hero_image_credit_text
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
         slug

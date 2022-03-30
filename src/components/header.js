@@ -58,7 +58,7 @@ const Header = () => {
             <StaticImage
               className={logoImg}
               alt="Website logo - stylised signature of Roo da Silva"
-              src="../images/signature-heavy-weight-800px-copy.png"
+              src="../images/signature-heavy-weight-800px.png"
             />
           </Link>
         </div>

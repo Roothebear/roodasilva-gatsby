@@ -3,23 +3,21 @@ import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import ListContainer from "../components/listContainer";
-import HighlightCard from "../components/highlight-card";
 import Footer from "../components/footer";
 
-import { bannerImg, bannerSection } from "../components/layout.module.css";
+import { bannerSection } from "../components/layout.module.css";
 
 const IndexPage = ({ data }) => {
   console.log("data: ", data);
 
   return (
     <Layout pageTitle={"home"}>
-    <section className={bannerSection}>
-        <StaticImage
-          className={bannerImg}
-          alt="Website logo - stylised signature of Roo da Silva"
-          src="../images/mountain-lake.jpeg"
-        />
-    </section>
+      <StaticImage
+        className={bannerSection}
+        alt="Website logo - stylised signature of Roo da Silva"
+        src="../images/reindeer.jpg"
+      />
+
       <section>
         <h1>Welcome!</h1>
         <p>
@@ -29,9 +27,6 @@ const IndexPage = ({ data }) => {
           interests and continuing learning in this and related areas.
         </p>
         <Footer />
-      </section>
-      <section>
-        <HighlightCard />
       </section>
       <section>
         <h2>Recent projects</h2>
@@ -53,6 +48,14 @@ export const query = graphql`
           date(formatString: "D MMMM YYYY")
           title
           variant
+          type
+          hero_image_alt
+          hero_image_credit_text
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
           tags
         }
         id

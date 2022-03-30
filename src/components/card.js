@@ -1,29 +1,38 @@
 import { Link } from "gatsby";
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { card, cardImg, buttonPrimary, cardContainer } from "./layout.module.css";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import {
+  card,
+  cardImg,
+  buttonPrimary,
+  cardContainer,
+} from "./layout.module.css";
 
-const Card = ({ title, body, date, link }) => {
+const Card = ({
+  title,
+  body,
+  date,
+  link,
+  type,
+  hero_image_alt,
+  hero_image_credit_link,
+  hero_image_credit_text,
+  hero_image,
+}) => {
+  const image = getImage(hero_image);
+
   return (
-    <article className={card}>
-      <StaticImage
-        className={cardImg}
-        alt="Website logo - stylised signature of Roo da Silva"
-        src="../images/mountain-lake.jpeg"
-      />
-      <div className={cardContainer}>
-        <h3>{title}</h3>
-      </div>
-      <div className={cardContainer}>
-        <p>{body}</p>
-        <p>{date}</p>
-      </div>
-      <div className={cardContainer}>
-        <Link to={link}>
+    <Link to={link}>
+      <article className={card}>
+        <GatsbyImage className={cardImg} image={image} alt={hero_image_alt} />
+        <div className={cardContainer}>
+          <h3>{title}</h3>
+          <p>{date}</p>
+          <p>{type}</p>
           <button className={buttonPrimary}>more</button>
-        </Link>
-      </div>
-    </article>
+        </div>
+      </article>
+    </Link>
   );
 };
 

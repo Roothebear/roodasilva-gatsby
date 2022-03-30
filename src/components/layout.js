@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Footer from "./footer";
 import Header from "./header";
 
 import {
@@ -27,7 +26,6 @@ const Layout = ({ pageTitle, children }) => {
       <Header />
       <main>
         {children}
-        <Footer />
       </main>
     </div>
   );

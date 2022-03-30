@@ -1,4 +1,4 @@
-import React, {Fragment } from "react";
+import React, { Fragment } from "react";
 import { graphql } from "gatsby";
 import PostTemplate from "../../templates/post-template";
 import ProjectTemplate from "../../templates/project-template";
@@ -16,11 +16,7 @@ const MdxPage = ({
     portfolio: <ProjectTemplate data={data} />,
   };
 
-  return (
-    <Fragment>
-      {templates[variant] ? templates[variant] : null}
-    </Fragment>
-  );
+  return <Fragment>{templates[variant] ? templates[variant] : null}</Fragment>;
 };
 
 export const query = graphql`
@@ -30,6 +26,14 @@ export const query = graphql`
         title
         date(formatString: "MMMM D, YYYY")
         variant
+        type
+        hero_image_alt
+        hero_image_credit_text
+        hero_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
         tags
       }
       body

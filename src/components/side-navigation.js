@@ -29,23 +29,28 @@ const SideNavigation = ({ navOpen }) => {
       <nav className={mainHeaderNav}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+            <Link to="/">
               home
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
+            <Link to="/about">
               about
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/portfolio" className={navLinkText}>
+            <Link to="/portfolio">
               portfolio
             </Link>
           </li>
           <li>
-            <Link to="/articles" className={navLinkText}>
+            <Link to="/articles">
               articles
+            </Link>
+          </li>
+          <li>
+            <Link to="/connect">
+              connect
             </Link>
           </li>
         </ul>
@@ -70,18 +75,23 @@ const SideNavigation = ({ navOpen }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
+            <Link to="/about">
               about
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/portfolio" className={navLinkText}>
+            <Link to="/portfolio">
               portfolio
             </Link>
           </li>
           <li>
-            <Link to="/articles" className={navLinkText}>
+            <Link to="/articles">
               articles
+            </Link>
+          </li>
+          <li>
+            <Link to="/connect">
+              connect
             </Link>
           </li>
         </ul>

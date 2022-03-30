@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { card, cardImg, buttonPrimary, cardContainer, highlightCard } from "./layout.module.css";
+import { card, cardImg, buttonPrimary } from "./layout.module.css";
 
 
 const HighlightCard = ({ title, body, date, link }) => {

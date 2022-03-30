@@ -1,9 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-
-import { navLinkItem, navLinkText } from "./layout.module.css";
-import { footerNav, navLinks, icon } from "./footer.module.css";
+import { icon } from "./footer.module.css";
 
 const Footer = () => {
   return (

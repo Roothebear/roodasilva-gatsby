@@ -8,10 +8,7 @@ const ArticlesPage = ({ data }) => {
     <Layout pageTitle={"articles"}>
       <section>
         <h2>Articles</h2>
-        <ListContainer
-          data={data}
-          filterParam={"articles"}
-        />
+        <ListContainer data={data} filterParam={"articles"} />
       </section>
     </Layout>
   );
@@ -25,6 +22,14 @@ export const query = graphql`
           date(formatString: "D MMMM YYYY")
           title
           variant
+          type
+          hero_image_alt
+          hero_image_credit_text
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
           tags
         }
         id
