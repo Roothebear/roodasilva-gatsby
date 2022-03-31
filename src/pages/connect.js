@@ -13,7 +13,7 @@ const ConnectPage = ({ data }) => {
         <StaticImage
           className={bannerImg}
           alt="Website logo - stylised signature of Roo da Silva"
-          src="../images/cat-cone.jpg"
+          src="../images/cat-cone.jpeg"
         />
       </section>
       <section>
