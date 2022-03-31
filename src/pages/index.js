@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
       <StaticImage
         className={bannerSection}
         alt="Website logo - stylised signature of Roo da Silva"
-        src="../images/reindeer.jpg"
+        src="../images/mountain-lake.jpeg"
       />
       <section>
         <h1>Welcome!</h1>
