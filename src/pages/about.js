@@ -13,7 +13,7 @@ const AboutPage = ({ data }) => {
         <StaticImage
           className={bannerImg}
           alt="Website logo - stylised signature of Roo da Silva"
-          src="../images/cat-cone.jpeg"
+          src="../images/mountain-lake.jpeg"
         />
       </section>
       <section>
@@ -59,9 +59,9 @@ const AboutPage = ({ data }) => {
           to a growing TikTok addiction.
         </p>
       </section>
-      <section>
+      {/* <section>
         <HighlightCard />
-      </section>
+      </section> */}
     </Layout>
   );
 };

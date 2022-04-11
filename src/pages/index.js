@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import ListContainer from "../components/listContainer";
-import Footer from "../components/footer";
+import SocialBar from "../components/socialBar";
 
 import { bannerSection } from "../components/layout.module.css";
 
@@ -15,26 +15,35 @@ const IndexPage = ({ data }) => {
       <StaticImage
         className={bannerSection}
         alt="Website logo - stylised signature of Roo da Silva"
-        src="../images/reindeer.jpeg"
+        src="../images/roo-portrait.jpg"
       />
       <section>
         <h1>Welcome!</h1>
         <p>
-          Thank you for dropping by! I am a freelance full stack developer and
-          love working alongside others to bring ideas to life with a range of
-          front and back end technologies. This site documents my work,
-          interests and continuing learning in this and related areas.
+          Thank you for dropping by! I have 8+ years experience in CEO and
+          Founder roles giving strategic direction and leadership to non-profit
+          organisations and initiatives. Most recently I have supported the
+          growth of a local inclusion-focused non-profit into a national
+          organisation, and built award-winning infrastructure during the
+          pandemic.
         </p>
-        <Footer />
+        <p>
+          I am currently looking for new challenges and opportunities to apply
+          my skills in different spheres! I offer expert project leadership and
+          management alongside quickly expanding technical skills in full-stack
+          test driven development. I love working alongside others to bring
+          ideas to life with a range offront and back end technologies.
+        </p>
+        <SocialBar />
       </section>
-      <section>
+      {/* <section>
         <h2>Recent projects</h2>
         <ListContainer data={data} filterParam={"portfolio"} />
       </section>
       <section>
         <h2>Recent articles</h2>
         <ListContainer data={data} filterParam={"articles"} />
-      </section>
+      </section> */}
     </Layout>
   );
 };

@@ -6,6 +6,8 @@ import {
   cardImg,
   buttonPrimary,
   cardContainer,
+  small,
+  flexRow,
 } from "./layout.module.css";
 
 const Card = ({
@@ -27,8 +29,10 @@ const Card = ({
         <GatsbyImage className={cardImg} image={image} alt={hero_image_alt} />
         <div className={cardContainer}>
           <h3>{title}</h3>
-          <p>{date}</p>
-          <p>{type}</p>
+          <div className={flexRow}>
+            <p className={small}>{date}</p>
+            <p className={small}>{type}</p>
+          </div>
           <button className={buttonPrimary}>more</button>
         </div>
       </article>

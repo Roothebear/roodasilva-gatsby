@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
 import { bannerImg, bannerSection } from "../components/layout.module.css";
+import SocialBar from "../components/socialBar";
 
 const ConnectPage = ({ data }) => {
   console.log("data: ", data);
@@ -13,17 +14,19 @@ const ConnectPage = ({ data }) => {
         <StaticImage
           className={bannerImg}
           alt="Website logo - stylised signature of Roo da Silva"
-          src="../images/cat-cone.jpeg"
+          src="../images/mountain-lake.jpeg"
         />
       </section>
       <section>
-        <h1>Welcome!</h1>
-        <p>
-          Connect with me here:
-        </p>
-
+        <h1>Get in touch</h1>
+        {/* <p>
+          Teach me something, ask a question, suggest working together, or
+          anything else that comes to mind! I’ll do my best to get back to you
+          asap.
+        </p> */}
+        <a href="mailto: hello@roodasilva.com">hello@roodasilva.com</a>
+        <SocialBar />
       </section>
-      <Footer />
     </Layout>
   );
 };

@@ -5,12 +5,12 @@ import { StaticImage } from "gatsby-plugin-image";
 import {
   navLinks,
   navLinkItem,
-  navLinkText,
   logoImg,
   mainHeaderNav,
   sideNavigationContainer,
   sideNavigationContainerOpen,
   sideNavigationHeader,
+  sideBarLink
 } from "./layout.module.css";
 
 const SideNavigation = ({ navOpen }) => {
@@ -29,27 +29,27 @@ const SideNavigation = ({ navOpen }) => {
       <nav className={mainHeaderNav}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to="/">
+            <Link to="/" className={sideBarLink}>
               home
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about">
+            <Link to="/about" className={sideBarLink}>
               about
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/portfolio">
+          {/* <li className={navLinkItem}>
+            <Link to="/portfolio" className={sideBarLink}>
               portfolio
             </Link>
           </li>
           <li>
-            <Link to="/articles">
+            <Link to="/articles" className={sideBarLink}>
               articles
             </Link>
-          </li>
+          </li> */}
           <li>
-            <Link to="/connect">
+            <Link to="/connect" className={sideBarLink}>
               connect
             </Link>
           </li>
@@ -70,27 +70,27 @@ const SideNavigation = ({ navOpen }) => {
       <nav className={mainHeaderNav}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+            <Link to="/" className={sideBarLink}>
               home
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about">
+            <Link to="/about" className={sideBarLink}>
               about
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/portfolio">
+          {/* <li className={navLinkItem}>
+            <Link to="/portfolio" className={sideBarLink}>
               portfolio
             </Link>
           </li>
           <li>
-            <Link to="/articles">
+            <Link to="/articles" className={sideBarLink}>
               articles
             </Link>
-          </li>
+          </li> */}
           <li>
-            <Link to="/connect">
+            <Link to="/connect" className={sideBarLink}>
               connect
             </Link>
           </li>
