@@ -1,7 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
-import Footer from "../components/footer";
 import { bannerImg, bannerSection } from "../components/layout.module.css";
 import SocialBar from "../components/socialBar";
 

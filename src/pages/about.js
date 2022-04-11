@@ -1,7 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
-import HighlightCard from "../components/highlight-card";
 import { bannerImg, bannerSection } from "../components/layout.module.css";
 
 const AboutPage = ({ data }) => {

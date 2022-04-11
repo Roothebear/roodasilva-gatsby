@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
-import ListContainer from "../components/listContainer";
 import SocialBar from "../components/socialBar";
 
 import { bannerSection } from "../components/layout.module.css";
