@@ -17,13 +17,14 @@ const ConnectPage = ({ data }) => {
         />
       </section>
       <section>
-        <h1>Get in touch</h1>
+        <h1>Get in touch, I'd love to hear from you!</h1>
         {/* <p>
           Teach me something, ask a question, suggest working together, or
           anything else that comes to mind! I’ll do my best to get back to you
           asap.
         </p> */}
         <a href="mailto: hello@roodasilva.com">hello@roodasilva.com</a>
+        <br></br>
         <SocialBar />
       </section>
     </Layout>
