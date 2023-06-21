@@ -19,7 +19,7 @@ const ProjectTemplate = ({
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
-    <Layout pageTitle={"portfolio"}>
+    <Layout pageTitle={"CHANGE"}>
         <GatsbyImage
           className={bannerSection}
           image={image}

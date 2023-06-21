@@ -4,7 +4,7 @@ import Card from "./card";
 
 const ListContainer = ({ data, filterParam }) => {
   const projectData = data.allMdx.nodes.filter(
-    (node) => node.frontmatter.variant === `${filterParam}`
+    (node) => node.frontmatter.type === `${filterParam}`
   );
 
   return (
@@ -13,7 +13,7 @@ const ListContainer = ({ data, filterParam }) => {
         <Card
           key={node.id}
           title={node.frontmatter.title}
-          type={node.frontmatter.type}
+          topic={node.frontmatter.topic}
           header_img_url={node.frontmatter.header_img_url}
           date={node.frontmatter.date}
           link={`/${filterParam}/${node.slug}`}

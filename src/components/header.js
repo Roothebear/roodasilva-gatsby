@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import SideNavigation from "./side-navigation";
+import SideNavigation from "./sideNavigation";
 
 import {
   logoImg,

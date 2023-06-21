@@ -7,16 +7,16 @@ const MdxPage = ({
   data,
   data: {
     mdx: {
-      frontmatter: { variant },
+      frontmatter: { type },
     },
   },
 }) => {
   const templates = {
-    articles: <PostTemplate data={data} />,
-    portfolio: <ProjectTemplate data={data} />,
+    article: <PostTemplate data={data} />,
+    project: <ProjectTemplate data={data} />,
   };
 
-  return <Fragment>{templates[variant] ? templates[variant] : null}</Fragment>;
+  return <Fragment>{templates[type] ? templates[type] : null}</Fragment>;
 };
 
 export const query = graphql`
@@ -25,8 +25,8 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
-        variant
         type
+        topic
         hero_image_alt
         hero_image_credit_text
         hero_image {
