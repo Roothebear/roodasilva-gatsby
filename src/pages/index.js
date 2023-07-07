@@ -24,15 +24,15 @@ const IndexPage = ({ data }) => {
           Founder roles giving strategic direction and leadership to non-profit
           organisations and initiatives. Most recently I have supported the
           growth of a local inclusion-focused non-profit into a national
-          organisation, and developed and led award-winning infrastructure during the
+          organisation, and built award-winning infrastructure during the
           pandemic.
         </p>
         <p>
           I am currently looking for new challenges and opportunities to apply
-          my skills in different spheres. I offer expert project leadership and
+          my skills in different spheres! I offer expert project leadership and
           management alongside quickly expanding technical skills in full-stack
           test driven development. I love working alongside others to bring
-          ideas to life with a range of front and back end technologies.
+          ideas to life with a range offront and back end technologies.
         </p>
         <SocialBar />
       </section>

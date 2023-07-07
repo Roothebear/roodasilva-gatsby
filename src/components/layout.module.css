@@ -367,6 +367,7 @@ a {
   font-family: var(--font-body);
   font-weight: 700;
   text-decoration: none;
+  margin-bottom: 1rem;
 }
 
 .side-bar-link {
