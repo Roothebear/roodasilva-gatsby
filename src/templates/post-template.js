@@ -19,7 +19,7 @@ const PostTemplate = ({
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
-    <Layout pageTitle={"CHANGE"}>
+    <Layout pageTitle={"articles"}>
         <GatsbyImage
           className={bannerSection}
           image={image}

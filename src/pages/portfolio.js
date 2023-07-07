@@ -21,8 +21,8 @@ export const query = graphql`
         frontmatter {
           date(formatString: "D MMMM YYYY")
           title
+          variant
           type
-          topic
           tags
           hero_image_alt
           hero_image_credit_text

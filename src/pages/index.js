@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import SocialBar from "../components/socialBar";
-import ListContainer from "../components/listContainer";
 
 import { bannerSection } from "../components/layout.module.css";
 
@@ -15,7 +14,7 @@ const IndexPage = ({ data }) => {
       <StaticImage
         className={bannerSection}
         alt="Website logo - stylised signature of Roo da Silva"
-        src="../images/roo-portrait-graphics.png"
+        src="../images/roo-portrait.jpg"
       />
       <section>
         <h1>Welcome!</h1>
@@ -36,14 +35,14 @@ const IndexPage = ({ data }) => {
         </p>
         <SocialBar />
       </section>
-      <section>
+      {/* <section>
         <h2>Recent projects</h2>
-        <ListContainer data={data} filterParam={"project"} />
+        <ListContainer data={data} filterParam={"portfolio"} />
       </section>
       <section>
         <h2>Recent articles</h2>
-        <ListContainer data={data} filterParam={"article"} />
-      </section>
+        <ListContainer data={data} filterParam={"articles"} />
+      </section> */}
     </Layout>
   );
 };
@@ -55,8 +54,8 @@ export const query = graphql`
         frontmatter {
           date(formatString: "D MMMM YYYY")
           title
+          variant
           type
-          topic
           hero_image_alt
           hero_image_credit_text
           hero_image {

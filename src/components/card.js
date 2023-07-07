@@ -15,7 +15,7 @@ const Card = ({
   body,
   date,
   link,
-  topic,
+  type,
   hero_image_alt,
   hero_image_credit_link,
   hero_image_credit_text,
@@ -31,7 +31,7 @@ const Card = ({
           <h3>{title}</h3>
           <div className={flexRow}>
             <p className={small}>{date}</p>
-            <p className={small}>{topic}</p>
+            <p className={small}>{type}</p>
           </div>
           <button className={buttonPrimary}>more</button>
         </div>
