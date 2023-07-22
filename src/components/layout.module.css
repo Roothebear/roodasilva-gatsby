@@ -20,7 +20,7 @@ pseudo-elements). One common use of this selector is to apply a custom
 :root {
   /* primary colours */
   --colour-primary: #1177ca;
-  --colour-secondary: #009078;
+  --colour-secondary: #007784;
   --colour-tertiary: #f88c19;
   --colour-grey: #b0d4ce;
   --colour-white: #ffffffff;
@@ -132,17 +132,12 @@ p {
 }
 
 ol,
-ul {
-  display: block;
-  list-style: none;
-}
+ul {}
 
 li {
-  display: block;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  text-align: center;
+  margin-left: 30px;
+  padding: 5px;
+  font-size: 1.3rem;
 }
 
 /* * * Inline text semantics * * */
