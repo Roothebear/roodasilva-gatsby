@@ -10,9 +10,9 @@
 }
 
 .side-nav-list li {
-  justify-self: flex-end;
   list-style: none;
-  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: right;
 }
 
