@@ -1,0 +1,77 @@
+/* The Overlay (background) */
+.overlay-main {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: var(--colour-secondary);
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+}
+
+/* Position the content inside the overlay */
+
+.menu-button-container {
+  display: flexbox;
+  padding: 15px;
+}
+
+.overlay-nav {
+  position: relative;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+  padding-top: 30px;
+  /* 10% from the top */
+  top: 10%;
+  /* 100% width */
+  width: 100%;
+  /* Centered text/links */
+  text-align: center;
+}
+
+.overlay-nav ul li {
+  position: relative;
+  right: 60px;
+  text-align: right;
+}
+
+.overlay-nav h1 {
+  color: var(--colour-text-secondary);
+}
+
+.menu-button {
+  display: inline-flex;
+  position: fixed;
+  top: 70px;
+  right: 60px;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  /* Sit on top */
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: var(--colour-tertiary);
+}
+
+.overlay-link {
+  font-size: 3em;
+  color: var(--colour-white);
+
+}
+
+
+.overlay-link:hover {
+  color: var(--colour-tertiary);
+}

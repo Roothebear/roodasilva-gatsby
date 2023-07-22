@@ -12,15 +12,17 @@ pseudo-elements). One common use of this selector is to apply a custom
   color: var(--colour-text-primary);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700;800&family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Open+Sans:wght@700&display=swap');
+
+
 
 /* * * Root * * */
 :root {
   /* primary colours */
   --colour-primary: #1177ca;
-  --colour-secondary: #6db4cf;
-  --colour-tertiary: #ffc400;
-  --colour-grey: #f5f5f5;
+  --colour-secondary: #009078;
+  --colour-tertiary: #f88c19;
+  --colour-grey: #b0d4ce;
   --colour-white: #ffffffff;
   /* secondary colours */
   --mid-blue: #5b80a3;
@@ -29,271 +31,47 @@ pseudo-elements). One common use of this selector is to apply a custom
   /* text colours */
   --colour-text-primary: #010f1d;
   --colour-text-secondary: #ffffffff;
+  --colour-text-tertiary: #636363;
   /* fonts */
-  --font-title: 'Open Sans', sans-serif;
-  --font-body: "Montserrat", sans-serif;
+  --font-title: 'EB Garamond', sans-serif;
+  --font-body: "EB Garamond", sans-serif;
+  --font-details: "Gill Sans";
   /* shadows */
   --colour-box-shadow: 0 2px 6px 0 #0000001e, 0 0px 20px 0 rgba(0, 0, 0, 0.137);
 }
 
-html {
-  font-size: 18px;
-}
+/* * * Containers, main, and sections * * */
 
-
-/* * * Content Sectioning * * */
-
-/* Header and footer */
-header {
-  display: flex;
-  align-items: center;
-  background-color: var(--colour-white);
-  border-bottom: 1px solid var(--colour-grey);
-  margin-left: 200px;
-  width: calc(100% - 200px);
-  transition: 0.3s ease-in-out margin-left;
-}
-
-.main-header {
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  overflow: hidden;
-  padding-right: 20px;
-  z-index: 1;
-}
-
-.main-header-container {
-  display: none;
-  align-items: center;
-}
-
-footer {
-  padding: 0px;
-}
-
-/* Nav */
-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main-header-nav {
+.page-container {
   display: block;
-  margin-top: 80px;
-}
-
-.nav_button_options {
-  justify-content: center;
-}
-
-.nav-links {
-  display: block;
-  list-style: none;
-  padding-left: 0;
-}
-
-.nav-link-item {
-  display: block;
-}
-
-nav ul,
-nav ol {}
-
-nav li {}
-
-nav a {}
-
-nav a:visited {}
-
-nav a:hover {}
-
-nav a:active {}
-
-/* Main and sections */
-
-main {
   width: 100%;
-  /* padding: 16px; */
+}
+
+.layout-main {
+  position: relative;
   display: flex;
+  min-height: 800px;
   flex-direction: column;
   align-items: left;
-  margin-left: 350px;
-  margin-bottom: 250px;
-  transition: 0.3s ease-in-out margin-left;
-  margin-top: 60px;
-  background-color: var(--colour-white);
+  padding-left: 260px;
+  padding-right: 15px;
+  padding-bottom: 100px;
+  padding-top: 80px;
 }
 
 section {
-  width: 80%;
+  position: relative;
+  display: flex;
   max-width: 1200px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  background-color: var(--colour-white);
-}
-
-.banner-section {
-  background-color: var(--colour-primary);
-  display: flex;
-  width: 100%;
-  height: 500px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  max-width: 1800px;
-  transition: 0.3s ease-in-out left;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  box-shadow: var(--colour-box-shadow);
-  overflow: hidden;
-}
-
-/* Containers */
-
-.app-container {
-  display: flex;
-  width: 100%;
-}
-
-.side-navigation-container {
-  display: block;
-  position: fixed;
-  width: 200px;
-  height: 100%;
-  border-right: 1px solid var(--colour-grey);
-  background-color: var(--colour-white);
-  left: 0px;
-  transition: 0.3s ease-in-out left;
-  z-index: 3;
-}
-
-.side-navigation-container-open {
-  display: block;
-  position: fixed;
-  width: 200px;
-  height: 100%;
-  border-right: 1px solid var(--colour-grey);
-  background-color: var(--colour-white);
-  left: 0px;
-  transition: 0.3s ease-in-out left;
-  z-index: 3;
-}
-
-.side-navigation-header {
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
   padding-left: 0px;
-  height: 60px;
-}
-
-.sidebar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s1);
-  background-color: #f1f1f1;
-  background-color: var(--colour-tertiary);
-}
-
-.sidebar> :first-child {
-  flex-basis: 100px;
-  flex-grow: 1;
-  background-color: var(--colour-primary);
-}
-
-.sidebar> :last-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-inline-size: 60%;
-}
-
-.card {
-  /* display and alignment */
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  align-items: center;
+  padding-right: 120px;
   justify-content: center;
-  /* sizing */
-  /* height: 300px; */
-  /* margin and padding */
-  margin: 0px;
-  padding: 0px;
-  /* colour */
-  color: var(--colour-text-primary);
-  background-color: var(--colour-grey);
-  /* styling */
-  border-radius: 5px;
-  box-shadow: var(--colour-box-shadow);
-  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.card-container {
-  display: grid;
-  width: 100%;
-  padding: 15px;
-  flex: 1 1 auto;
-}
-
-.highlight-card {
-  /* display and alignment */
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* sizing */
-  height: 200px;
-  /* margin and padding */
-  padding: 20px;
-  /* colour */
-  color: var(--colour-text-primary);
-  background-color: var(--colour-grey);
-  /* styling */
-  border-radius: 5px;
-  box-shadow: var(--colour-box-shadow);
-}
-
-.list-container {
-  display: grid;
-  gap: 26px;
-  grid-template-columns: 1fr 1fr;
-}
-
-.social-media-container {
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-
-/* Pop-ups and overlays */
-
-.pop-up-overlay {
-  padding: 20px;
-  padding-top: 16px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: right;
-  background-color: var(--primary-text-overlay);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-}
 
 /* * * Text block content * * */
 
@@ -308,19 +86,26 @@ h6 {
 }
 
 h1 {
-  margin-bottom: 1em;
-  font-size: 3rem;
+  margin-bottom: 0.8rem;
+  font-size: 2.1rem;
+  font-weight: 300;
 }
 
 h2 {
-  margin-bottom: 1em;
-  font-size: 2.1rem;
-  font-weight: 700;
+  margin-bottom: 0.6rem;
+  font-size: 1.9rem;
+  font-weight: 300;
 }
 
 h3 {
-  margin-bottom: 0em;
-  font-size: 1.45rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+h4 {
+  margin-bottom: 0rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -339,6 +124,7 @@ dl {
 
 p {
   display: block;
+  font-size: 1.3rem;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -349,23 +135,23 @@ ol,
 ul {
   display: block;
   list-style: none;
-  padding-left: 0;
 }
 
 li {
   display: block;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
 /* * * Inline text semantics * * */
 
 a {
+  font-size: 1.3rem;
   color: var(--colour-text-primary);
   font-family: var(--font-body);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -382,8 +168,9 @@ a:active {
 }
 
 a:hover {
-  color: var(--colour-secondary);
+  color: var(--colour-tertiary);
 }
+
 
 strong {}
 
@@ -396,11 +183,8 @@ i {}
 /* If you specify a font size, consider using the `em` unit so that it works
 universally, e.g. for both `h1 small` and `p small` */
 small {
-  font-size: 0.3rem;
-}
-
-.small {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 data {}
@@ -413,33 +197,15 @@ del {}
 
 ins {}
 
+
 /* * * Embedded content * * */
 
 img {}
 
-.logo-img {
-  width: 145px;
-}
 
-.card-img {
-  height: 200px;
-  object-fit: cover;
-}
+/* * * Buttons * * */
 
-.banner-img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.social-icon {
-  width: 24px;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-
-/* * * Forms, inputs, buttons * * */
-
-.button-primary {
+/* .button-primary {
   width: 100px;
   padding: 10px;
   border-radius: 30px;
@@ -447,98 +213,43 @@ img {}
   text-align: center;
   color: var(--colour-text-primary);
   background-color: var(--colour-white);
-  /* box-shadow: var(--colour-box-shadow); */
-}
+  box-shadow: var(--colour-box-shadow);
+} */
 
-button:hover {
+/* button:hover {
   background-color: var(--colour-tertiary);
-}
+} */
 
-.icon-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: inherit;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.icon-button:hover {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: inherit;
-  background-color: var(--colour-tertiary);
-  border: none;
-  cursor: pointer;
-}
 
 /* * * Media Queries * * */
 
-@media screen and (max-width: 68em) {
-  section {
-    width: 80%;
-  }
-
-  .side-navigation-container {
-    left: -200px;
-  }
-
-  header {
-    margin-left: 0px;
-    width: 100%;
-  }
-
-  main {
-    margin-left: 150px;
-  }
-
-  .main-header-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0px;
-  }
-}
+@media screen and (max-width: 68em) {}
 
 @media screen and (max-width: 56em) {
-
-  html {
-    font-size: 16px;
-  }
-
-  .list-container {
-    grid-template-columns: 1fr;
+  .layout-main {
+    padding-left: 80px;
   }
 
   section {
-    width: 80%;
+
+    padding-right: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
-  main {
-    margin-left: 100px;
-  }
 }
 
 @media screen and (max-width: 40em) {
+
+  .layout-main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   section {
-    width: 90%;
-    margin-left: 5%;
-  }
-
-  main {
-    margin-left: 0px;
-  }
-
-  .banner-section {
-    width: 100%;
-    height: 500px;
-    margin-top: 0px;
-    margin-left: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }

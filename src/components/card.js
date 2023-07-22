@@ -2,41 +2,40 @@ import { Link } from "gatsby";
 import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
-  card,
-  cardImg,
-  buttonPrimary,
+  cardBox,
   cardContainer,
-  small,
-  flexRow,
-} from "./layout.module.css";
+  cardImg,
+  cardInfo,
+  cardTitle,
+} from "./card.module.css";
+import TagList from "./tagList";
 
 const Card = ({
   title,
-  body,
   date,
   link,
   type,
   hero_image_alt,
-  hero_image_credit_link,
-  hero_image_credit_text,
   hero_image,
+  tags,
 }) => {
   const image = getImage(hero_image);
 
   return (
-    <Link to={link}>
-      <article className={card}>
+    <article className={cardBox}>
+      <Link to={link}>
         <GatsbyImage className={cardImg} image={image} alt={hero_image_alt} />
-        <div className={cardContainer}>
-          <h3>{title}</h3>
-          <div className={flexRow}>
-            <p className={small}>{date}</p>
-            <p className={small}>{type}</p>
-          </div>
-          <button className={buttonPrimary}>more</button>
-        </div>
-      </article>
-    </Link>
+      </Link>
+      <div className={cardContainer}>
+        <Link to={link}>
+          <h3 className={cardTitle}>{title}</h3>
+          <small className={cardInfo}>
+            {date} | {type}
+          </small>
+        </Link>
+        <TagList tags={tags} />
+      </div>
+    </article>
   );
 };
 

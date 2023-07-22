@@ -1,0 +1,17 @@
+.tag {
+  font-family: var(--font-details);
+  font-size: 0.8rem;
+  margin: 0.67rem;
+  margin-left: 0px;
+  /* padding: 0.67rem; */
+  color: var(--colour-text-tertiary);
+  background-color: var(--colour-white);
+  /* styling */
+  border-radius: 0px;
+  box-shadow: var(--colour-box-shadow);
+}
+
+.tag-list {
+  display: flex;
+  flex-direction: row;
+}

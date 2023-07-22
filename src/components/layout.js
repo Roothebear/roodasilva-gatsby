@@ -1,32 +1,33 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import React, { useState } from "react";
 import Header from "./header";
-
-import {
-  appContainer
-} from "./layout.module.css";
+import { pageContainer, layoutMain } from "./layout.module.css";
+import "./layout.module.css";
+import Footer from "./footer";
+import OverlayNav from "./overlayNav";
+import SideNav from "./sideNav";
 
 const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          siteUrl
-        }
-      }
-    }
-  `);
+  const [overlayNavOpen, setOverlayNavOpen] = useState(false);
 
-  return (
-    <div className={appContainer}>
-      <title>
-        {pageTitle} | {data.site.siteMetadata.title}
-      </title>
-      <Header />
-      <main>
-        {children}
-      </main>
+  const openOverlayNav = () => {
+    return setOverlayNavOpen(true);
+  };
+
+  const closeOverlayNav = () => {
+    return setOverlayNavOpen(false);
+  };
+
+  return overlayNavOpen ? (
+    <div className={pageContainer}>
+      <OverlayNav closeOverlayNav={closeOverlayNav} />
+    </div>
+  ) : (
+    <div className={pageContainer}>
+      <title>{pageTitle}</title>
+      <Header openOverlayNav={openOverlayNav} />
+      <SideNav />
+      <main className={layoutMain}>{children}</main>
+      <Footer />
     </div>
   );
 };

@@ -1,16 +1,29 @@
-.footer-nav {
-  width: 100%;
+.main-footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-links {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
+  flex-direction: column;
+  position: relative;
+  bottom: 0px;
+  padding: 15px;
 }
 
-.social-icon {
-  width: 24px;
-  margin: 0rem;
+.hline-container {
+  padding-bottom: 20px;
+}
+
+.hline {
+  height: 1px;
+  background-color: var(--colour-grey);
+}
+
+.footerInfo {
+text-align: center;
+color: var(--colour-secondary);
+}
+
+@media screen and (max-width: 40em) {
+
+  .main-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

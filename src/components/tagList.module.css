@@ -1,0 +1,25 @@
+.tag {
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 0px;
+  background-color: var(--colour-tertiary);
+  /* styling */
+  border-radius: 0px;
+
+}
+
+.tag-text {
+  font-family: var(--font-details);
+  font-weight: 400;
+  color: var(--colour-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-direction: row;
+}
