@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
       <StaticImage
         className={bannerImage}
         alt="Website logo - stylised signature of Roo da Silva"
-        src="../images/roo-portrait.jpg"
+        src="../images/roo-portrait-colour.jpg"
       />
       <section>
         <h1>Welcome to my newly launched personal website.</h1>
@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
         </p>
       </section>
       <section>
-        <h2>Recent work</h2>
+        <h2>Recent</h2>
         <CardDeck data={data} />
       </section>
     </Layout>

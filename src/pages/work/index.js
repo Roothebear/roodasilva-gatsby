@@ -7,7 +7,7 @@ const WorkPage = ({ data }) => {
   return (
     <Layout pageTitle={"work"}>
       <section>
-        <h1>Work</h1>
+        <h1>Work (+ play)</h1>
         <CardDeck data={data} />
       </section>
     </Layout>
@@ -41,4 +41,4 @@ export const query = graphql`
 
 export default WorkPage;
 
-export const Head = () => <title>Work Page</title>;
+export const Head = () => <title>Work</title>;
