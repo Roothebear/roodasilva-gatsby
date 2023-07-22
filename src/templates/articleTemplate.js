@@ -28,9 +28,7 @@ const ArticleTemplate = ({
         <TagList tags={tags} />
         <br></br>
         {children}
-        <Link to="/work">
-          Back to work
-        </Link>
+        <Link to="/work">Back to work</Link>
       </section>
     </Layout>
   );
