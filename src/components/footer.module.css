@@ -12,7 +12,7 @@
 
 .hline {
   height: 1px;
-  background-color: var(--colour-grey);
+  background-color: var(--colour-secondary);
 }
 
 .footerInfo {
