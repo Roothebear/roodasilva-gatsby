@@ -16,16 +16,14 @@ const IndexPage = ({ data }) => {
       <section>
         <h1>Welcome to my newly launched personal website.</h1>
         <p>
-          Creating and maintaining an online collection of those articles,
-          projects, and other resources that might usefully be shared with
-          others has been a goal for a number of years. Of course, more pressing
-          matters tend to come to the fore! Now, in the summer of 2023, I feel I
-          have had sufficient time to start the process.
+          Creating and maintaining an online collection of articles,
+          projects, and other resources has been a goal for a number of years. Of course, more pressing
+          matters tend to come to the fore! Now, in the summer of 2024, perhaps I'll finally get there...!
         </p>
         <p>
           I look forward to gradually updating 'work (+ play)' in due course.
           Otherwise, for a potted history of my background in community focused
-          work and more recently the arts, please do read more{" "}
+          work and more recently the arts, please do read more{" "}.
           <Link to="/about">here</Link>.
         </p>
       </section>
